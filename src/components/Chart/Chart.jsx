@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Line, Bar } from 'react-chartjs-2';
-
+import { Line, Polar, HorizontalBar,Bubble } from 'react-chartjs-2';
+import { Doughnut,Scatter } from 'react-chartjs-2';
 
 import { fetchDailyData } from '../../api';
 
 import styles from './Chart.module.css';
 
 const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
+  console.log("Chart",Chart)
   const [dailyData, setDailyData] = useState({});
 
   useEffect(() => {
@@ -21,7 +22,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
 
   const barChart = (
     confirmed ? (
-      <Bar
+      <Doughnut
         data={{
           labels: ['Infected', 'Recovered', 'Deaths'],
           datasets: [
@@ -42,7 +43,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
 
   const lineChart = (
     dailyData[0] ? (
-      <Line
+      <HorizontalBar
         data={{
           labels: dailyData.map(({ date }) => date),
           datasets: [{
