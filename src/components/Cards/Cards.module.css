@@ -33,3 +33,16 @@
 .width-300{
   width:300px;
 }
+.class1{
+  color:red;
+  font-weight: 900;
+  
+}
+.class2{
+  color:green;
+  font-weight: 700;
+}
+.class3{
+  color:yellowgreen;
+  font-weight: 700;
+}
