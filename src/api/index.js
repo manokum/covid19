@@ -38,3 +38,14 @@ export const fetchCountries = async () => {
     return error;
   }
 };
+
+export const indiaDailyValue = async () => {
+  try{
+    const { data} = await axios.get(`${url1}`);
+
+    // return countries.map((country) => country.name);
+    return data.statewise.map(({ confirmed, deaths, recovered, state }) => ({ confirmed: confirmed, deaths: deaths, recovered : recovered,states : state}));
+  } catch(err){
+    return err;
+  }
+};

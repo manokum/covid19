@@ -30,3 +30,15 @@ body {
   padding-bottom: 24px;
   background: beige;
 }
+.navcenter ul {
+  text-align: center;
+}
+.navcenter ul li {
+  display: inline;
+  float: none;
+}
+.navcenter ul li a {
+  display: inline-block;
+  margin:10px;
+  text-decoration: none;
+}

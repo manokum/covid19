@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Line, Polar, HorizontalBar,Bubble } from 'react-chartjs-2';
+import { Line, Polar, HorizontalBar,Bubble,Pie } from 'react-chartjs-2';
 import { Doughnut,Scatter } from 'react-chartjs-2';
 
 import { fetchDailyData } from '../../api';
@@ -22,7 +22,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
 
   const barChart = (
     confirmed ? (
-      <Doughnut
+      <Pie
         data={{
           labels: ['Infected', 'Recovered', 'Deaths'],
           datasets: [
