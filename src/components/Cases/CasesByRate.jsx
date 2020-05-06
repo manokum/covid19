@@ -6,6 +6,7 @@ import { indiaDailyValue } from '../../api';
 import styles from './Cases.module.css';
 
 const CasesByRate = ({  data: { confirmed, deaths, recovered, states } }) => {
+  
   const [state,setCountries] = useState([]);
   console.log("data CasesByRate",state)
   useEffect(() => {

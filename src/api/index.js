@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const url = 'https://covid19.mathdro.id/api';
 const url1 = 'https://api.covid19india.org/data.json';
+const url2 = 'https://api.covid19india.org/state_district_wise.json';
 
 export const fetchData = async (country) => {
   let changeableUrl = url;
@@ -45,6 +46,17 @@ export const indiaDailyValue = async () => {
 
     // return countries.map((country) => country.name);
     return data.statewise.map(({ confirmed, deaths, recovered, state }) => ({ confirmed: confirmed, deaths: deaths, recovered : recovered,states : state}));
+  } catch(err){
+    return err;
+  }
+};
+
+export const indiaStateValue = async () => {
+  try{
+    const { data} = await axios.get(`${url2}`);
+
+    return data;
+    //return data.statewise.map(({ confirmed, deaths, recovered, state }) => ({ confirmed: confirmed, deaths: deaths, recovered : recovered,states : state}));
   } catch(err){
     return err;
   }
