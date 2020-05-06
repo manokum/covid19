@@ -25,6 +25,13 @@
   .card {
     margin: 2% 0 !important;
   }
+  .customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    /* font-size: 2.9vw !important; */
+    font-size: 3.5vw !important
+    /* width: 100%; */
+  }
 }
 .MuiCardContent-root:last-child {
   padding-bottom: 24px;
@@ -45,4 +52,53 @@
 .class3{
   color:yellowgreen;
   font-weight: 700;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  width: 65%;
+}
+
+@media only screen and (max-width: 770px) {
+  .container {
+    width: 100%;
+  }
+  .customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    /* font-size: 2.9vw !important; */
+    font-size: 3.5vw !important
+    /* width: 100%; */
+  }
+}
+
+.customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  /* width: 100%; */
+}
+
+.customers td, .customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+;
+
+.customers tr:nth-child(even){background-color: #f2f2f2;}
+
+.customers tr:hover {background-color: #ddd;}
+
+.customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #51d0de;
+  color: white;
+}
+.formControl {
+  width: 30%;
+  margin-bottom: 30px !important;
+}
+.flashColor,caption{
+  color: #ff414e
 }

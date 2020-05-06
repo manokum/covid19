@@ -1,8 +1,7 @@
 body {
   /* background-color: rgb(250, 250,250); */
-  background-color: lightblue;
+  background-color:#F5FFFA;
 }
-
 .container {
   display: flex;
   align-items: center;
