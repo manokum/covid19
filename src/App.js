@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Cards, CountryPicker, Chart,CasesByRate,IndiaByState } from './components';
+import { Cards, CountryPicker, Chart,CasesByRate,IndiaByState,IndiaAllDistrict } from './components';
 import { fetchData } from './api/';
 import styles from './App.module.css';
 
@@ -65,6 +65,9 @@ class App extends React.Component {
             <li>
               <Link to="/india">India All State</Link>
             </li>
+            <li>
+              <Link to="/zonedata">India Zone Data</Link>
+            </li>
           </ul>
     </div>
 </nav>
@@ -78,6 +81,7 @@ class App extends React.Component {
           {/* <img className={styles.image} src={image} alt="COVID-19" /> */}
         
           <IndiaByState/>
+          <IndiaAllDistrict/>
           {/* <CasesByRate data={data} /> */}
           </div>
           </Route>
@@ -92,6 +96,11 @@ class App extends React.Component {
           <Route exact path="/india">
           <div className={styles.container}>
           <CasesByRate data={data} />
+          </div>
+          </Route>
+          <Route exact path="/zonedata">
+          <div className={styles.container}>
+          <IndiaAllDistrict/>
           </div>
           </Route>
          
