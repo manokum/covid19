@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/covid19/static/css/main.7431d5f5.chunk.css",
-    "main.js": "/covid19/static/js/main.6467495f.chunk.js",
-    "main.js.map": "/covid19/static/js/main.6467495f.chunk.js.map",
+    "main.css": "/covid19/static/css/main.ab621095.chunk.css",
+    "main.js": "/covid19/static/js/main.8664dd3d.chunk.js",
+    "main.js.map": "/covid19/static/js/main.8664dd3d.chunk.js.map",
     "runtime-main.js": "/covid19/static/js/runtime-main.89aefda5.js",
     "runtime-main.js.map": "/covid19/static/js/runtime-main.89aefda5.js.map",
-    "static/js/2.fcc8bf29.chunk.js": "/covid19/static/js/2.fcc8bf29.chunk.js",
-    "static/js/2.fcc8bf29.chunk.js.map": "/covid19/static/js/2.fcc8bf29.chunk.js.map",
+    "static/js/2.cc51562f.chunk.js": "/covid19/static/js/2.cc51562f.chunk.js",
+    "static/js/2.cc51562f.chunk.js.map": "/covid19/static/js/2.cc51562f.chunk.js.map",
     "index.html": "/covid19/index.html",
-    "precache-manifest.b4c3a582836c5c4e27bc30a2015532da.js": "/covid19/precache-manifest.b4c3a582836c5c4e27bc30a2015532da.js",
+    "precache-manifest.f4ab2411f54d25ea7c87f71e6a97645d.js": "/covid19/precache-manifest.f4ab2411f54d25ea7c87f71e6a97645d.js",
     "service-worker.js": "/covid19/service-worker.js",
-    "static/css/main.7431d5f5.chunk.css.map": "/covid19/static/css/main.7431d5f5.chunk.css.map",
-    "static/js/2.fcc8bf29.chunk.js.LICENSE.txt": "/covid19/static/js/2.fcc8bf29.chunk.js.LICENSE.txt",
+    "static/css/main.ab621095.chunk.css.map": "/covid19/static/css/main.ab621095.chunk.css.map",
+    "static/js/2.cc51562f.chunk.js.LICENSE.txt": "/covid19/static/js/2.cc51562f.chunk.js.LICENSE.txt",
     "static/media/image.jpg": "/covid19/static/media/image.2ce01c11.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.89aefda5.js",
-    "static/js/2.fcc8bf29.chunk.js",
-    "static/css/main.7431d5f5.chunk.css",
-    "static/js/main.6467495f.chunk.js"
+    "static/js/2.cc51562f.chunk.js",
+    "static/css/main.ab621095.chunk.css",
+    "static/js/main.8664dd3d.chunk.js"
   ]
 }
