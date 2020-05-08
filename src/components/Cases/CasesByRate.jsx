@@ -5,7 +5,7 @@ import { indiaDailyValue } from '../../api';
 
 import styles from './Cases.module.css';
 
-const CasesByRate = ({  data: { confirmed, deaths, recovered, states } }) => {
+const CasesByRate = ({  data: { confirmed, deaths, recovered, states,lastupdatedtime } }) => {
   
   const [state,setCountries] = useState([]);
   console.log("data CasesByRate",state)
@@ -100,6 +100,7 @@ const CasesByRate = ({  data: { confirmed, deaths, recovered, states } }) => {
           <th>Confirmed</th>
           <th>Deaths</th>
           <th>Recovered</th>
+          <th>Last Updated</th>
         </tr>
       </thead>
       <tbody>
@@ -109,6 +110,7 @@ const CasesByRate = ({  data: { confirmed, deaths, recovered, states } }) => {
             <td>{product.confirmed}</td>
             <td>{product.deaths}</td>
             <td>{product.recovered}</td>
+            <td>{product.lastupdatedtime}</td>
           </tr>
         ))}
       </tbody>

@@ -121,6 +121,7 @@ const IndiaByState = ({ data }) => {
           <th>Active</th>
           <th>Deaths</th>
           <th>Recovered</th>
+          
         </tr>
       </thead>
       <tbody>
@@ -131,6 +132,7 @@ const IndiaByState = ({ data }) => {
             <td>{product[1].active}</td>
             <td>{product[1].deceased}</td>
             <td>{product[1].recovered}</td>
+            
           </tr>
         ))}
       </tbody>

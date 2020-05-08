@@ -45,7 +45,7 @@ export const indiaDailyValue = async () => {
     const { data} = await axios.get(`${url1}`);
 
     // return countries.map((country) => country.name);
-    return data.statewise.map(({ confirmed, deaths, recovered, state }) => ({ confirmed: confirmed, deaths: deaths, recovered : recovered,states : state}));
+    return data.statewise.map(({ confirmed, deaths, recovered, state ,lastupdatedtime}) => ({ confirmed: confirmed, deaths: deaths, recovered : recovered,states : state ,lastupdatedtime: lastupdatedtime}));
   } catch(err){
     return err;
   }
