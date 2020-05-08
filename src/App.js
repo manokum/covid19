@@ -5,8 +5,6 @@ import { fetchData } from './api/';
 import styles from './App.module.css';
 import { NavLink } from 'react-router-dom';
 import image from './images/image.jpg';
-import world from './images/world.png';
-import Favicon from 'react-favicon';
 import icons from 'glyphicons'
 
 import {
