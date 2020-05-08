@@ -26,7 +26,11 @@ body {
     width: 100%;
   }
 }
-
+.image1 {
+  width: 40px;
+  height: 10px;
+  /* margin-top: 50px; */
+}
 .MuiCardContent-root:last-child {
   padding-bottom: 24px;
   background: beige;
@@ -77,6 +81,7 @@ nav {
   border-radius: 4px;
   /* background-color: #eceff1; */
   margin-bottom: 25px;
+  margin-top: 18px;
 }
 
 .navbar__link {
@@ -89,8 +94,8 @@ nav {
   text-indent: .3em; */
   color: #181818;
   border-bottom: 3px solid transparent;
-  font-size: 18px;
-    margin: 20px
+  font-size: 14px;
+  margin: 12px;
 }
 
 .navbar__link:hover {
@@ -100,4 +105,6 @@ nav {
 .navbar__link__active {
   border-bottom: 2px solid navy;
   transition: border-bottom .5s ease-in-out;
+  color: navy;
+    font-weight: 500
 }

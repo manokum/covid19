@@ -5,6 +5,10 @@ import { fetchData } from './api/';
 import styles from './App.module.css';
 import { NavLink } from 'react-router-dom';
 import image from './images/image.jpg';
+import world from './images/world.png';
+import Favicon from 'react-favicon';
+import icons from 'glyphicons'
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -65,27 +69,34 @@ class App extends React.Component {
       className={styles.navbar__link}
       to="/"
     >
-      India
-    </NavLink>
-    <NavLink
-      activeClassName={styles.navbar__link__active}
-      className={styles.navbar__link}
-      to="/world"
-    >
+      {/* <img
+    src="./images/image.jpg"
+    alt="Unactive Link Image"
+    height="45"
+    width="45"
+  /> */}
+  {icons.globe}
       World
     </NavLink>
     <NavLink
       activeClassName={styles.navbar__link__active}
       className={styles.navbar__link}
+      to="/world"
+    > {icons.castle}
+      India
+    </NavLink>
+    <NavLink
+      activeClassName={styles.navbar__link__active}
+      className={styles.navbar__link}
       to="/india"
-    >
+    >{icons.fax}
       State
     </NavLink>
     <NavLink
       activeClassName={styles.navbar__link__active}
       className={styles.navbar__link}
       to="/zonedata"
-    >
+    >{icons.map}
       Zone
     </NavLink>
     </div>
@@ -99,18 +110,19 @@ class App extends React.Component {
           <div className={styles.container}>
           {/* <img className={styles.image} src={image} alt="COVID-19" /> */}
         
-          <IndiaByState/>
+          <div className={styles.container}>
+          
+          <CountryPicker handleCountryChange={this.handleCountryChange} />
+           <Chart data={data} country={country} /> 
+           <Cards data={data} />
+           
+           </div>
           {/* <IndiaAllDistrict/> */}
           {/* <CasesByRate data={data} /> */}
           </div>
           </Route>
           <Route exact path="/world">
-          <div className={styles.container}>
-          
-        <CountryPicker handleCountryChange={this.handleCountryChange} />
-         <Chart data={data} country={country} /> 
-         <Cards data={data} />
-         </div>
+          <IndiaByState/>
           </Route>
           <Route exact path="/india">
           <div className={styles.container}>
