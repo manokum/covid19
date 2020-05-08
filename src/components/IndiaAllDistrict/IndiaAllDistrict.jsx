@@ -2,8 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import SelectSearch from 'react-select-search';
 import { NativeSelect, FormControl } from '@material-ui/core';
-import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete';
+// import TextField from '@material-ui/core/TextField';
+// import Autocomplete from '@material-ui/lab/Autocomplete';
 import styles from './IndiaAllDistrict.module.css';
 
 export default class IndiaAllDistrict extends React.Component {
@@ -136,7 +136,7 @@ console.log("inside submit string",array)
       </thead>
       <tbody>
         {this.state.datato.data.map((product,i) => (
-          <tr>
+          <tr key={i}>
             <td>{product.district}</td>
             <td className={product.districtZoneType.length === 8 ? styles.red : product.districtZoneType.length === 10 ? styles.green : styles.orange }>{product.districtZoneType}</td>
           </tr>

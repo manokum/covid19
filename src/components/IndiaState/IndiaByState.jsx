@@ -126,7 +126,7 @@ const IndiaByState = ({ data }) => {
       <tbody>
         {firstName.map((product,i) => (
           <tr key={i}>
-            <td>{product[0]}</td>
+            <td className={styles.tdBreak}>{product[0]}</td>
             <td className={(product[1].confirmed)  > 25 ? styles.class3 : styles.class1 }>{product[1].confirmed}</td>
             <td>{product[1].active}</td>
             <td>{product[1].deceased}</td>

@@ -60,3 +60,6 @@
     margin: 10px !important;
     margin-bottom: 30px !important
   }
+  .tdBreak{
+    word-break: break-all;
+  }

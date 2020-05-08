@@ -86,6 +86,11 @@ const CasesByRate = ({  data: { confirmed, deaths, recovered, states } }) => {
     //     {countries.map((country, i) => <option key={i} value={country}>{country}</option>)}
     //   </NativeSelect>
     // </FormControl> confirmed, deaths, recovered,
+    /**
+     * 
+     * .data.map((product,i) => (
+          <tr key={i}>
+     */
     <div className={styles.container}>
     { <table className={styles.customers}>
       <caption>All States Data</caption>
@@ -98,8 +103,8 @@ const CasesByRate = ({  data: { confirmed, deaths, recovered, states } }) => {
         </tr>
       </thead>
       <tbody>
-        {state.map(product => (
-          <tr key={product.id}>
+        {state.map((product,i) => (
+          <tr key={i}>
             <td>{product.states}</td>
             <td>{product.confirmed}</td>
             <td>{product.deaths}</td>

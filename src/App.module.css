@@ -7,6 +7,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  /* background-color: #282c34; */
 
 }
 
@@ -30,6 +31,11 @@ body {
   padding-bottom: 24px;
   background: beige;
 }
+/* .navcenter{
+  background-color: #ff5500;
+    border-color: #E7E7E7;
+} */
+
 .navcenter ul {
   text-align: center;
 }
@@ -41,4 +47,25 @@ body {
   display: inline-block;
   margin:10px;
   text-decoration: none;
+}
+nav ul {
+  list-style: none;
+  padding: 0px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+nav ul li:first-child {
+  margin-left: 0px;
+}
+
+nav ul li a {
+  color: #fff;
+}
+
+nav {
+  display: flex;
 }

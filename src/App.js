@@ -17,8 +17,11 @@ class App extends React.Component {
   state = {
     data: {},
     country: '',
+    color: "#282c34" 
   }
-
+  changeColor = color => {
+    this.setState({ color });
+  };
   async componentDidMount() {
     const data = await fetchData();
 
@@ -53,20 +56,20 @@ class App extends React.Component {
         </nav> */}
 
 <img className={styles.image} src={image} alt="COVID-19" />
-<nav className={styles.navcenter} role="navigation">
+<nav className={styles.navcenter} style={{ background: this.state.color }}  role="navigation">
     <div className={styles.navwrapper}>
     <ul>
             <li>
-              <Link to="/">Indian State Data</Link>
+              <Link to="/" onClick={() => this.changeColor("#282c34")}>Indian State Data</Link>
             </li>
             <li>
-              <Link to="/world">World Statistics</Link>
+              <Link to="/world"  onClick={() => this.changeColor("navy")}>World Statistics</Link>
             </li>
             <li>
-              <Link to="/india">India All State</Link>
+              <Link to="/india" onClick={() => this.changeColor("#007bff")}>India All State</Link>
             </li>
             <li>
-              <Link to="/zonedata">India Zone Data</Link>
+              <Link to="/zonedata" onClick={() => this.changeColor("orange")}>India Zone Data</Link>
             </li>
           </ul>
     </div>
@@ -81,7 +84,7 @@ class App extends React.Component {
           {/* <img className={styles.image} src={image} alt="COVID-19" /> */}
         
           <IndiaByState/>
-          <IndiaAllDistrict/>
+          {/* <IndiaAllDistrict/> */}
           {/* <CasesByRate data={data} /> */}
           </div>
           </Route>
