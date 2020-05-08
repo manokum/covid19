@@ -73,30 +73,30 @@ class App extends React.Component {
     src="./images/image.jpg"
     alt="Unactive Link Image"
     height="45"
-    width="45"
-  /> */}
-  {icons.globe}
+    width="45" 
+  /> */} 
+  <span className={styles.removeborder}>{icons.globe}</span>
       World
     </NavLink>
     <NavLink
       activeClassName={styles.navbar__link__active}
       className={styles.navbar__link}
-      to="/world"
-    > {icons.castle}
+      to="/indiaall"
+    >  <span className={styles.removeborder}>{icons.castle}</span>
       India
     </NavLink>
     <NavLink
       activeClassName={styles.navbar__link__active}
       className={styles.navbar__link}
       to="/india"
-    >{icons.fax}
+    ><span className={styles.removeborder}>{icons.map}</span>
       State
     </NavLink>
     <NavLink
       activeClassName={styles.navbar__link__active}
       className={styles.navbar__link}
       to="/zonedata"
-    >{icons.map}
+    ><span className={styles.removeborder}>{icons.homes}</span>
       Zone
     </NavLink>
     </div>
@@ -121,13 +121,14 @@ class App extends React.Component {
           {/* <CasesByRate data={data} /> */}
           </div>
           </Route>
-          <Route exact path="/world">
-          <IndiaByState/>
-          </Route>
-          <Route exact path="/india">
+          <Route exact path="/indiaall">
           <div className={styles.container}>
           <CasesByRate data={data} />
           </div>
+          
+          </Route>
+          <Route exact path="/india">
+          <IndiaByState/>
           </Route>
           <Route exact path="/zonedata">
           <div className={styles.container}>

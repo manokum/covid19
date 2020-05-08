@@ -108,3 +108,6 @@ nav {
   color: navy;
     font-weight: 500
 }
+.removeborder{
+  border-bottom: 2px solid white;
+}
