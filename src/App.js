@@ -60,16 +60,16 @@ class App extends React.Component {
     <div className={styles.navwrapper}>
     <ul>
             <li>
-              <Link to="/" onClick={() => this.changeColor("#282c34")}>Indian State Data</Link>
+              <Link to="/" onClick={() => this.changeColor("#282c34")}>State</Link>
             </li>
             <li>
-              <Link to="/world"  onClick={() => this.changeColor("navy")}>World Statistics</Link>
+              <Link to="/world"  onClick={() => this.changeColor("navy")}>World</Link>
             </li>
             <li>
-              <Link to="/india" onClick={() => this.changeColor("#007bff")}>India All State</Link>
+              <Link to="/india" onClick={() => this.changeColor("#007bff")}>India</Link>
             </li>
             <li>
-              <Link to="/zonedata" onClick={() => this.changeColor("orange")}>India Zone Data</Link>
+              <Link to="/zonedata" onClick={() => this.changeColor("orange")}>Zone</Link>
             </li>
           </ul>
     </div>
