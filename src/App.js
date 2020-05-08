@@ -3,7 +3,7 @@ import React from 'react';
 import { Cards, CountryPicker, Chart,CasesByRate,IndiaByState,IndiaAllDistrict } from './components';
 import { fetchData } from './api/';
 import styles from './App.module.css';
-
+import { NavLink } from 'react-router-dom';
 import image from './images/image.jpg';
 import {
   BrowserRouter as Router,
@@ -17,11 +17,8 @@ class App extends React.Component {
   state = {
     data: {},
     country: '',
-    color: "#282c34" 
   }
-  changeColor = color => {
-    this.setState({ color });
-  };
+
   async componentDidMount() {
     const data = await fetchData();
 
@@ -41,37 +38,56 @@ class App extends React.Component {
       <HashRouter basename='/'>
       {/* <Router> */}
       <div className={styles.container}>
-        {/* <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav> */}
+       
 
 <img className={styles.image} src={image} alt="COVID-19" />
-<nav className={styles.navcenter} style={{ background: this.state.color }}  role="navigation">
-    <div className={styles.navwrapper}>
+<nav className={styles.navcenter} role="navigation" className={styles.navbar} >
+    {/* <div className={styles.navwrapper}>
     <ul>
             <li>
-              <Link to="/" onClick={() => this.changeColor("#282c34")}>State</Link>
+              <Link to="/">Indian State Data</Link>
             </li>
             <li>
-              <Link to="/world"  onClick={() => this.changeColor("navy")}>World</Link>
+              <Link to="/world">World Statistics</Link>
             </li>
             <li>
-              <Link to="/india" onClick={() => this.changeColor("#007bff")}>India</Link>
+              <Link to="/india">India All State</Link>
             </li>
             <li>
-              <Link to="/zonedata" onClick={() => this.changeColor("orange")}>Zone</Link>
+              <Link to="/zonedata">India Zone Data</Link>
             </li>
           </ul>
+    </div> */}
+    <div className={styles.navwrapper}>
+    <NavLink
+      exact
+      activeClassName={styles.navbar__link__active}
+      className={styles.navbar__link}
+      to="/"
+    >
+      India
+    </NavLink>
+    <NavLink
+      activeClassName={styles.navbar__link__active}
+      className={styles.navbar__link}
+      to="/world"
+    >
+      World
+    </NavLink>
+    <NavLink
+      activeClassName={styles.navbar__link__active}
+      className={styles.navbar__link}
+      to="/india"
+    >
+      State
+    </NavLink>
+    <NavLink
+      activeClassName={styles.navbar__link__active}
+      className={styles.navbar__link}
+      to="/zonedata"
+    >
+      Zone
+    </NavLink>
     </div>
 </nav>
 
