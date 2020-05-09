@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Cards, CountryPicker, Chart,CasesByRate,IndiaByState,IndiaAllDistrict } from './components';
+import { Cards, CountryPicker, Chart,CasesByRate,IndiaByState,IndiaAllDistrict,AllNews } from './components';
 import { fetchData } from './api/';
 import styles from './App.module.css';
 import { NavLink } from 'react-router-dom';
@@ -113,7 +113,7 @@ class App extends React.Component {
           <CountryPicker handleCountryChange={this.handleCountryChange} />
            <Chart data={data} country={country} /> 
            <Cards data={data} />
-           
+          < AllNews/>
            </div>
           {/* <IndiaAllDistrict/> */}
           {/* <CasesByRate data={data} /> */}
