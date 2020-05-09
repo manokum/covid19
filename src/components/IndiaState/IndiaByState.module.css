@@ -63,3 +63,9 @@
   /* .tdBreak{
     word-break: break-all;
   } */
+
+  .arrowCss {
+    color: blue;
+    font-size: 18px;
+    font-weight: 800;
+  }

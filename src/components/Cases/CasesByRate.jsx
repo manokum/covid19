@@ -98,19 +98,21 @@ const CasesByRate = ({  data: { confirmed, deaths, recovered, states,lastupdated
         <tr>
           <th>States</th>
           <th>Confirmed</th>
-          <th>Deaths</th>
           <th>Recovered</th>
+          <th>Deaths</th>
+          
           <th>Last Updated</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody >
         {state.map((product,i) => (
           <tr key={i}>
             <td>{product.states}</td>
-            <td>{product.confirmed}</td>
-            <td>{product.deaths}</td>
-            <td>{product.recovered}</td>
-            <td>{product.lastupdatedtime}</td>
+            <td className={styles.colorRed}>{product.confirmed}</td>
+           
+            <td  className={styles.colorGreen}>{product.recovered} -  {Number(((product.recovered)/(product.confirmed)*100)).toFixed(0)  }%</td>
+            <td>{product.deaths} -  {Number(((product.deaths)/(product.confirmed)*100)).toFixed(0)  } %</td>
+            <td className={styles.font8}>{product.lastupdatedtime}</td> 
           </tr>
         ))}
       </tbody>

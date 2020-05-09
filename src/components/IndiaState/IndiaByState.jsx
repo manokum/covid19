@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NativeSelect, FormControl } from '@material-ui/core';
 import { Line, Polar, HorizontalBar,Bubble,Pie,Bar } from 'react-chartjs-2';
 import { indiaStateValue } from '../../api';
+import icons from 'glyphicons'  
 
 import styles from './IndiaByState.module.css';
 
@@ -42,7 +43,7 @@ const IndiaByState = ({ data }) => {
   const allSt = Object.keys(window.data);
   console.log("widnow allSt",allSt)
   setallStateData(allSt);
-  filterTypes(['Assam']);
+  filterTypes(['Andaman and Nicobar Islands']);
   console.log("window.result",window.result)
   const test  = Object.values(window.result);
   console.log("window.result['key'].districtData",test);
@@ -128,10 +129,10 @@ const IndiaByState = ({ data }) => {
         {firstName.map((product,i) => (
           <tr key={i}>
             <td className={styles.tdBreak}>{product[0]}</td>
-            <td className={(product[1].confirmed)  > 25 ? styles.class3 : styles.class1 }>{product[1].confirmed}</td>
+            <td className={(product[1].confirmed)  > 25 ? styles.class3 : styles.class1 }>{product[1].confirmed}  {"    "}  {"    "}      {product[1].delta.confirmed}<span className={styles.arrowCss}>{icons.arrowN}</span></td>
             <td>{product[1].active}</td>
-            <td>{product[1].deceased}</td>
-            <td>{product[1].recovered}</td>
+            <td>{product[1].deceased}   {"    "}   {"    "}    {product[1].delta.deceased}<span className={styles.arrowCss}>{icons.arrowN}</span></td>
+            <td>{product[1].recovered}   {"    "}  {"    "}    {product[1].delta.recovered}<span className={styles.arrowCss}>{icons.arrowN}</span></td>
             
           </tr>
         ))}

@@ -95,10 +95,10 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           <tr>
             <td>{confirmed.value}</td>
             <td>{recovered.value}</td>
-            <td><span className={(Number(((recovered.value)/(confirmed.value)*100)).toFixed(0))  > 25 ? styles.class3 : styles.class1 }>{Number(((recovered.value)/(confirmed.value)*100)).toFixed(0) }%</span></td>
+            <td><span className={(Number(((recovered.value)/(confirmed.value)*100)).toFixed(0))> 25 ? styles.class3 : styles.class1 }>{Number(((recovered.value)/(confirmed.value)*100)).toFixed(0) }%</span></td>
             <td>{deaths.value}</td>
             <td><span className={(Number(((deaths.value)/(confirmed.value)*100)).toFixed(0))  > 5 ? styles.class1 : styles.class2 }>{Number(((deaths.value)/(confirmed.value)*100)).toFixed(0) }%</span></td>
-          </tr>
+          </tr>  
     
       </tbody>
     </table> 
