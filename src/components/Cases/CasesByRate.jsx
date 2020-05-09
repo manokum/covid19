@@ -111,7 +111,7 @@ const CasesByRate = ({  data: { confirmed, deaths, recovered, states,lastupdated
             <td className={styles.colorRed}>{product.confirmed}</td>
            
             <td  className={styles.colorGreen}>{product.recovered} -  {Number(((product.recovered)/(product.confirmed)*100)).toFixed(0)  }%</td>
-            <td>{product.deaths} -  {Number(((product.deaths)/(product.confirmed)*100)).toFixed(0)  } %</td>
+            <td>{product.deaths} -  {Number(((product.deaths)/(product.confirmed)*100)).toFixed(0)  }%</td>
             <td className={styles.font8}>{product.lastupdatedtime}</td> 
           </tr>
         ))}
