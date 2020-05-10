@@ -5,7 +5,14 @@ import { indiaStateValue } from '../../api';
 import icons from 'glyphicons'  
 
 import styles from './IndiaByState.module.css';
-
+import { makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
 const IndiaByState = ({ data }) => {
   
   // const [state,setCountries] = useState([]);
@@ -113,7 +120,7 @@ const IndiaByState = ({ data }) => {
       </NativeSelect>
     </FormControl>
      
-      <table className={styles.customers}>
+      {/* <table className={styles.customers}>
       <caption>All States Data</caption>
       <thead>
         <tr>
@@ -137,7 +144,37 @@ const IndiaByState = ({ data }) => {
           </tr>
         ))}
       </tbody>
-    </table> </div>}
+    </table>  */}
+    
+    <TableContainer component={Paper}>
+      <Table className={styles.customers} aria-label="simple table">
+        <TableHead className={styles.fontWeight}>
+          <TableRow>
+            <TableCell className={styles.fontWeight}>District</TableCell>
+            <TableCell  className={styles.fontWeight} className={styles.testPadding} className={styles.colorRed1}>Confirmed</TableCell>
+            <TableCell  className={styles.fontWeight} className={styles.testPadding} className={styles.colorGreen1}>Active</TableCell>
+            <TableCell  className={styles.fontWeight} className={styles.testPadding1}>Deaths</TableCell>
+            <TableCell className={styles.fontWeight} className={styles.testPadding1}>Recovered</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {firstName.map((product,i) => (
+            <TableRow key={i}>
+              <TableCell component="th" scope="row" className={styles.fontWeight} className={styles.testPadding1}>
+              {product[0]}
+              </TableCell>
+              <TableCell  className={styles.colorRed} className={styles.colorRed}><div>{product[1].confirmed}  </div><div>{product[1].delta.confirmed}<span className={styles.arrowCss}>{icons.arrowN}</span></div></TableCell>
+              <TableCell  className={styles.colorGreen} className={styles.colorGreen}>{product[1].active}</TableCell>
+              <TableCell   className={styles.testPadding}><div>{product[1].deceased}</div> <div>{product[1].delta.deceased}<span className={styles.arrowCss}>{icons.arrowN}</span></div></TableCell>
+              <TableCell  className={styles.font8}><div>{product[1].recovered}</div><div>{product[1].delta.recovered}<span className={styles.arrowCss}>{icons.arrowN}</span></div></TableCell>
+              
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+    
+    </div>}
     </div>
     
 

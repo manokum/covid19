@@ -2,7 +2,14 @@ import React from 'react';
 import { Card, CardContent, Typography, Grid } from '@material-ui/core';
 import CountUp from 'react-countup';
 import cx from 'classnames';
-
+import { makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
 import styles from './Cards.module.css';
 
 const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
@@ -77,9 +84,9 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         
       </Grid> */}
 
-<table className={styles.customers}>
+{/* <table className={styles.customers}>
 <caption className = {styles.flashColor}>Last Updated : {new Date(lastUpdate).toDateString()} {new Date(lastUpdate).toLocaleTimeString()} </caption>
-      {/* <caption>{new Date(lastUpdate).toLocaleTimeString()}</caption> */}
+   
       <thead>
         <tr>
          <th>Confirmed</th>
@@ -101,9 +108,35 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           </tr>  
     
       </tbody>
-    </table> 
+    </table>  */}
 
-
+<TableContainer component={Paper}>
+      <Table className={styles.customers} aria-label="simple table">
+        <TableHead className={styles.fontWeight}>
+          <TableRow>
+            <TableCell className={styles.fontWeight}>Confirmed</TableCell>
+            <TableCell  className={styles.fontWeight} className={styles.testPadding} className={styles.colorRed1}>Recovered</TableCell>
+            <TableCell  className={styles.fontWeight} className={styles.testPadding} className={styles.colorGreen1}>R Rate.</TableCell>
+            <TableCell  className={styles.fontWeight} className={styles.testPadding1}>Deaths</TableCell>
+            <TableCell className={styles.fontWeight} className={styles.testPadding1}>D Rate.</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          
+            <TableRow >
+              <TableCell component="th" scope="row" className={styles.fontWeight} className={styles.testPadding1}>
+              {confirmed.value}
+              </TableCell>
+              <TableCell  className={styles.colorRed} className={styles.colorRed}>{recovered.value}</TableCell>
+              <TableCell  className={styles.colorGreen} className={styles.colorGreen}>{Number(((recovered.value)/(confirmed.value)*100)).toFixed(0) }%</TableCell>
+              <TableCell   className={styles.testPadding}>{deaths.value}</TableCell>
+              <TableCell  className={styles.font8}>{Number(((deaths.value)/(confirmed.value)*100)).toFixed(0) }%</TableCell>
+              
+            </TableRow>
+       
+        </TableBody>
+      </Table>
+    </TableContainer>
     </div>
   );
 };
