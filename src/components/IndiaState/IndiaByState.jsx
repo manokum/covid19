@@ -129,10 +129,10 @@ const IndiaByState = ({ data }) => {
         {firstName.map((product,i) => (
           <tr key={i}>
             <td className={styles.tdBreak}>{product[0]}</td>
-            <td className={(product[1].confirmed)  > 25 ? styles.class3 : styles.class1 }>{product[1].confirmed}  {"    "}  {"    "}      {product[1].delta.confirmed}<span className={styles.arrowCss}>{icons.arrowN}</span></td>
+            <td className={(product[1].confirmed)  > 25 ? styles.class3 : styles.class1 }><div>{product[1].confirmed}  </div><div>{product[1].delta.confirmed}<span className={styles.arrowCss}>{icons.arrowN}</span></div></td>
             <td>{product[1].active}</td>
-            <td>{product[1].deceased}   {"    "}   {"    "}    {product[1].delta.deceased}<span className={styles.arrowCss}>{icons.arrowN}</span></td>
-            <td>{product[1].recovered}   {"    "}  {"    "}    {product[1].delta.recovered}<span className={styles.arrowCss}>{icons.arrowN}</span></td>
+            <td><div>{product[1].deceased}</div> <div>{product[1].delta.deceased}<span className={styles.arrowCss}>{icons.arrowN}</span></div></td>
+            <td><div>{product[1].recovered}</div><div>{product[1].delta.recovered}<span className={styles.arrowCss}>{icons.arrowN}</span></div></td>
             
           </tr>
         ))}

@@ -113,7 +113,7 @@ class App extends React.Component {
           <CountryPicker handleCountryChange={this.handleCountryChange} />
            <Chart data={data} country={country} /> 
            <Cards data={data} />
-          < AllNews/>
+          {/* < AllNews/> */}
            </div>
           {/* <IndiaAllDistrict/> */}
           {/* <CasesByRate data={data} /> */}
