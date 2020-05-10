@@ -74,3 +74,11 @@
   .lightblue{
     background-color: lightblue !important;
   }
+  .fontFamilySize{
+    font-size: 12px !important;
+    font-family: none !important;
+  }
+  .lightblue{
+    font-size: 1.0rem !important;
+  }
+ 

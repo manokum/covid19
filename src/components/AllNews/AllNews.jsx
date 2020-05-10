@@ -12,6 +12,8 @@ import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { fetchNewsData } from '../../api';
+import CountUp from 'react-countup';
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: "100%"
@@ -44,18 +46,19 @@ const AllNews = () => {
     dailyData[0] ? 
     <div>
     { console.log(" dailyData[0]", dailyData)}
-    <p>News Headlines</p>
+    <p>Top News Headlines</p>
+    
     {dailyData.map((country, i) => <ExpansionPanel>
                  <ExpansionPanelSummary className={styles.lightblue}
-                   expandIcon={<ExpandMoreIcon />}
+                   expandIcon={<ExpandMoreIcon className={styles.lightblue} />}
                   aria-controls="panel1a-content"
                    id= {i}
                  >
-                   <Typography >{country.title}</Typography>
+                   <Typography className={styles.fontFamilySize} >{country.title}</Typography>
                  </ExpansionPanelSummary>
                  <ExpansionPanelDetails>
-                   <Typography>
-                   {country.description}
+                   <Typography className={styles.fontFamilySize} >
+                   {country.description}  <a href={country.url}>{country.url}</a>
                    </Typography>
                  </ExpansionPanelDetails>
                </ExpansionPanel>)}
