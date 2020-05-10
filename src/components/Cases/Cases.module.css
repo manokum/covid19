@@ -1,28 +1,33 @@
 .container {
-    display: flex;
-    justify-content: center;
-    width: 65%;
+    display: flex !important;
+    justify-content: center !important;
+    width: 65% !important;
   }
   
   @media only screen and (max-width: 770px) {
     .container {
-      width: 100%;
+      width: 100% !important;;
     }
     .customers {
       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-      border-collapse: collapse;
+      border-collapse: collapse !important;
       /* font-size: 2.9vw !important; */
       /* font-size: 3vw !important; */
-      font-size: 11px;
-      /* width: 100%; */
+      font-size: 11px !important;
+      width: 100%  !important;
+    }
+    .testPadding {
+      
+      padding: 3px !important;
+      font-size: 11px !important;
     }
   }
 
   .customers {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    font-size: 11px;
-    /* width: 100%; */
+    font-size: 11px !important;;
+    width: 100%  !important;
   }
   
   /* .customers td, .customers th {
@@ -46,9 +51,15 @@
 
   .colorRed{
     color:red !important;
+    padding: 3px !important;
+    font-size: 11px !important;
+    padding: 3px !important;
   }
   .colorGreen{
-    color:green !important;
+    color:rgb(0,139,139) !important;
+    padding: 3px !important;
+    font-size: 11px !important;
+    padding: 3px !important;
   }
   /* colorRed{
     color:red;
@@ -61,16 +72,34 @@
   font-size: 11px;
 }
 table {
-  min-width:  700
+  min-width:  700 !important;
 }
 .fontWeight{
   font-weight: 600 !important;
+  font-size: 12px !important;
+  padding: 3px !important;
 }
 .colorRed1{
   color:red !important;
   font-weight: 600 !important;
+  font-size: 12px !important;
+  padding: 3px !important;
 }
+
 .colorGreen1{
-  color:green !important;
+  color:rgb(0,139,139) !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  padding: 3px !important;
+}
+
+.testPadding {
+  padding: 3px !important;
+  font-size: 11px !important;
+  padding: 3px !important;
+}
+.testPadding1 {
+  font-size: 10.5px !important;
+  padding: 5px !important;
   font-weight: 600 !important;
 }

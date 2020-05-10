@@ -131,22 +131,22 @@ const CasesByRate = ({  data: { confirmed, deaths, recovered, states,lastupdated
         <TableHead className={styles.fontWeight}>
           <TableRow>
             <TableCell className={styles.fontWeight}>States</TableCell>
-            <TableCell align="right" className={styles.fontWeight}  className={styles.colorRed1}>Confirmed</TableCell>
-            <TableCell align="right" className={styles.fontWeight} className={styles.colorGreen1}>Recovered</TableCell>
-            <TableCell align="right" className={styles.fontWeight}>Deaths</TableCell>
-            <TableCell align="right" className={styles.fontWeight}>Last Updated</TableCell>
+            <TableCell  className={styles.fontWeight} className={styles.testPadding} className={styles.colorRed1}>Confirmed</TableCell>
+            <TableCell  className={styles.fontWeight} className={styles.testPadding} className={styles.colorGreen1}>Recovered</TableCell>
+            <TableCell  className={styles.fontWeight} className={styles.testPadding1}>Deaths</TableCell>
+            <TableCell className={styles.fontWeight} className={styles.testPadding1}>Last Updated</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {state.map((row,i) => (
             <TableRow key={i}>
-              <TableCell component="th" scope="row" className={styles.fontWeight}>
+              <TableCell component="th" scope="row" className={styles.fontWeight} className={styles.testPadding1}>
                 {row.states}
               </TableCell>
-              <TableCell align="right" className={styles.colorRed}>{row.confirmed}</TableCell>
-              <TableCell align="right" className={styles.colorGreen}><div>{row.recovered}</div><div>{Number(((row.recovered)/(row.confirmed)*100)).toFixed(0)  }%</div></TableCell>
-              <TableCell align="right"><div>{row.deaths} </div><div>{Number(((row.deaths)/(row.confirmed)*100)).toFixed(0)  }%</div></TableCell>
-              <TableCell align="right" className={styles.font8}>{row.lastupdatedtime}</TableCell>
+              <TableCell  className={styles.colorRed} className={styles.colorRed}>{row.confirmed}</TableCell>
+              <TableCell  className={styles.colorGreen} className={styles.colorGreen}><div>{row.recovered}</div><div>{Number(((row.recovered)/(row.confirmed)*100)).toFixed(0)  }%</div></TableCell>
+              <TableCell   className={styles.testPadding}><div>{row.deaths} </div><div>{Number(((row.deaths)/(row.confirmed)*100)).toFixed(0)  }%</div></TableCell>
+              <TableCell  className={styles.font8}>{row.lastupdatedtime}</TableCell>
               
             </TableRow>
           ))}
