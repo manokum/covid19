@@ -101,7 +101,8 @@ width:100%;
   margin-bottom: 30px !important;
 }
 .flashColor,caption{
-  color: #ff414e
+  color: #ff414e;
+  font-size: 11px;
 }
 
 .font8{

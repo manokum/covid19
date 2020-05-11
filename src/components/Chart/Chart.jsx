@@ -73,7 +73,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
         },
         legend:{
           display:true,
-          position:'right'
+          position:'bottom'
         },
     //     scales: {
     //       yAxes: [{

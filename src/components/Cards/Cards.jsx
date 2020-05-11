@@ -109,7 +109,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
     
       </tbody>
     </table>  */}
-
+<caption className = {styles.flashColor}>Last Updated : {new Date(lastUpdate).toDateString()} {new Date(lastUpdate).toLocaleTimeString()} </caption>
 <TableContainer component={Paper}>
       <Table className={styles.customers} aria-label="simple table">
         <TableHead className={styles.fontWeight}>
