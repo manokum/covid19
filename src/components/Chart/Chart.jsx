@@ -67,7 +67,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
       }}
       options={{
         title:{
-          display:true,
+          display:false,
           text:'World Data',
           fontSize:10
         },
@@ -76,13 +76,14 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
           position:'bottom'
         },
          maintainAspectRatio: false ,
-    //     scales: {
-    //       yAxes: [{
-    //            gridLines: {
-    //               display: false,
-    //           }
-    //       }]
-    //  }
+        scales: {
+          yAxes: [{
+              //  gridLines: {
+              //     display: false,
+              // },
+              display : false
+          }]
+     }
       }
     }
       />
