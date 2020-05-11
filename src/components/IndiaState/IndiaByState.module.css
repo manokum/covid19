@@ -145,3 +145,6 @@ table {
   font-size: 11px !important;
   padding: 3px !important;
 }
+.hidden{
+  display: none;
+}
