@@ -3,7 +3,7 @@ import { NativeSelect, FormControl } from '@material-ui/core';
 import { Line, Polar, HorizontalBar,Bubble,Pie,Bar } from 'react-chartjs-2';
 import { indiaStateValue } from '../../api';
 import icons from 'glyphicons'  
-import _ from 'underscore'  
+// import _ from 'underscore'  
 import styles from './IndiaByState.module.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -155,7 +155,7 @@ const IndiaByState = ({ data }) => {
           <TableRow>
             <TableCell className={styles.fontWeight}><div>District</div><div>Total</div>Rate<div></div></TableCell>
             {/* <TableCell  className={styles.fontWeight} className={styles.testPadding} className={styles.colorRed1}><div>Confirm</div><div>{firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].confirmed, 0)}</div><div><p className={styles.hidden}>T</p></div></TableCell> */}
-            <TableCell  className={styles.fontWeight} className={styles.testPadding} className={styles.colorRed1}><div>Confirmed</div><div>{firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].confirmed, 0)}</div><div>{Number(((firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].active, 0)/(firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].confirmed, 0)))*100)).toFixed(0)  }%</div></TableCell>
+  <TableCell  className={styles.fontWeight} className={styles.testPadding} className={styles.colorRed1}><div>Confirmed</div><div>{firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].confirmed, 0)}</div><div>-</div></TableCell>
             <TableCell  className={styles.fontWeight} className={styles.testPadding} className={styles.colorGreen1}><div>Active</div><div>{firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].active, 0)}</div><div>{Number(((firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].active, 0)/(firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].confirmed, 0)))*100)).toFixed(0)  }%</div></TableCell>
             <TableCell  className={styles.fontWeight} className={styles.testPadding1}><div>Deaths</div><div>{firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].deceased, 0)}</div><div>{Number(((firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].deceased, 0)/(firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].confirmed, 0)))*100)).toFixed(0)  }%</div></TableCell>
             <TableCell className={styles.fontWeight} className={styles.testPadding1}><div>Recovered</div><div>{firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].recovered, 0)}</div><div>{Number(((firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].recovered, 0)/(firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].confirmed, 0)))*100)).toFixed(0)  }%</div></TableCell>
