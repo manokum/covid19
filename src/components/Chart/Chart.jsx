@@ -69,12 +69,13 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
         title:{
           display:true,
           text:'World Data',
-          fontSize:15
+          fontSize:10
         },
         legend:{
           display:true,
           position:'bottom'
         },
+         maintainAspectRatio: false ,
     //     scales: {
     //       yAxes: [{
     //            gridLines: {
