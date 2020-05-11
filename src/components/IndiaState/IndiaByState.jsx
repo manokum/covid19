@@ -3,7 +3,7 @@ import { NativeSelect, FormControl } from '@material-ui/core';
 import { Line, Polar, HorizontalBar,Bubble,Pie,Bar } from 'react-chartjs-2';
 import { indiaStateValue } from '../../api';
 import icons from 'glyphicons'  
-
+import _ from 'underscore'  
 import styles from './IndiaByState.module.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -145,19 +145,23 @@ const IndiaByState = ({ data }) => {
         ))}
       </tbody>
     </table>  */}
+   
+    
+    
     
     <TableContainer component={Paper}>
       <Table className={styles.customers} aria-label="simple table">
         <TableHead className={styles.fontWeight}>
           <TableRow>
-            <TableCell className={styles.fontWeight}>District</TableCell>
-            <TableCell  className={styles.fontWeight} className={styles.testPadding} className={styles.colorRed1}>Confirmed</TableCell>
-            <TableCell  className={styles.fontWeight} className={styles.testPadding} className={styles.colorGreen1}>Active</TableCell>
-            <TableCell  className={styles.fontWeight} className={styles.testPadding1}>Deaths</TableCell>
-            <TableCell className={styles.fontWeight} className={styles.testPadding1}>Recovered</TableCell>
+            <TableCell className={styles.fontWeight}><div>District</div><div> </div></TableCell>
+            <TableCell  className={styles.fontWeight} className={styles.testPadding} className={styles.colorRed1}><div>Confirmed</div><div>{firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].confirmed, 0)}</div></TableCell>
+            <TableCell  className={styles.fontWeight} className={styles.testPadding} className={styles.colorGreen1}><div>Active</div><div>{firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].active, 0)}</div></TableCell>
+            <TableCell  className={styles.fontWeight} className={styles.testPadding1}><div>Deaths</div><div>{firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].deceased, 0)}</div></TableCell>
+            <TableCell className={styles.fontWeight} className={styles.testPadding1}><div>Recovered</div><div>{firstName.reduce((totalCalories, firstName) => totalCalories + firstName[1].recovered, 0)}</div></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
+        {/* <span>{_.firstName(_.map(product, confirmed => confirmed.total))}</span> */}
           {firstName.map((product,i) => (
             <TableRow key={i}>
               <TableCell component="th" scope="row" className={styles.fontWeight} className={styles.testPadding1}>
@@ -170,6 +174,18 @@ const IndiaByState = ({ data }) => {
               
             </TableRow>
           ))}
+          
+          {/* {_.sum(_.map(firstName, product => product[1].total))} 
+          const meals = [
+  { calorie: 10},
+  { calorie: 15},
+  { calorie: 20}
+];
+
+const calorieTotal = meals.reduce((totalCalories, meal) => totalCalories + meal.calorie, 0);
+
+console.log(calorieTotal);
+          */}
         </TableBody>
       </Table>
     </TableContainer>
