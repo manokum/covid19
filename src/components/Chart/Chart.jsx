@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Line, Polar, HorizontalBar,Bubble,Pie } from 'react-chartjs-2';
+import { Line, Polar, HorizontalBar,Bubble,Pie,Bar } from 'react-chartjs-2';
 import { Doughnut,Scatter } from 'react-chartjs-2';
 
 import { fetchDailyData } from '../../api';
@@ -42,25 +42,67 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   );
 
   const lineChart = (
+    
     dailyData[0] ? (
-      <HorizontalBar
-        data={{
-          labels: dailyData.map(({ date }) => date),
-          datasets: [{
-            data: dailyData.map((data) => data.confirmed),
-            label: 'Infected',
-            borderColor: '#3333ff',
-            fill: true,
-          }, {
-            data: dailyData.map((data) => data.deaths),
-            label: 'Deaths',
-            borderColor: 'red',
-            backgroundColor: 'rgba(255, 0, 0, 0.5)',
-            fill: true,
+      
+      <Bar
+      data={{
+        labels: [[...dailyData].pop().date],
+        datasets: [
+          {
+            label: 'Confirmed',
+            backgroundColor: 'rgba(0, 0, 255, 0.5)',
+            borderColor: 'rgba(0, 0, 255, 0.5)',
+            borderWidth: 2,
+            data: [[...dailyData].pop().confirmed]
           },
-          ],
-        }}
+          {
+            label: 'Deaths',
+            backgroundColor: 'rgba(0, 255, 0, 0.5)',
+            borderColor: 'rgba(0, 255, 0, 0.5)',
+            borderWidth: 2,
+            data: [[...dailyData].pop().deaths]
+          }
+        ]
+      }}
+      options={{
+        title:{
+          display:true,
+          text:'World Data',
+          fontSize:15
+        },
+        legend:{
+          display:true,
+          position:'right'
+        },
+    //     scales: {
+    //       yAxes: [{
+    //            gridLines: {
+    //               display: false,
+    //           }
+    //       }]
+    //  }
+      }
+    }
       />
+      // <Line
+      // data={{
+      //   labels: dailyData.map(({ date }) => date),
+      //   datasets: [{
+      //     data: dailyData.map((data) => data.confirmed),
+      //     label: 'Infected',
+      //     borderColor: '#3333ff',
+      //     fill: true,
+      //   }, {
+      //     data: dailyData.map((data) => data.deaths),
+      //     label: 'Deaths',
+      //     borderColor: 'red',
+      //     backgroundColor: 'rgba(255, 0, 0, 0.5)',
+      //     fill: true,
+      //   },
+      //   ],
+      // }}
+    ///>
     ) : null
   );
 
