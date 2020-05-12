@@ -63,9 +63,10 @@
   } */
 
   .arrowCss {
-    color: #4169e1 ;
-    font-size: 18px;
+    color: #4169e1;
+    font-size: 10px;
     font-weight: 800;
+    padding: 3px;
   }
 
   .font8{
@@ -147,4 +148,7 @@ table {
 }
 .hidden{
   display: none;
+}
+.visibilityhidden{
+  visibility: hidden;
 }

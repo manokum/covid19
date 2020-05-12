@@ -103,3 +103,12 @@ table {
   padding: 5px !important;
   font-weight: 600 !important;
 }
+.arrowCss {
+  color: #4169e1;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px;
+}
+.visiblehide{
+  visibility:hidden;
+}
