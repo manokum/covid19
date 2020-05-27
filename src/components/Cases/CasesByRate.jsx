@@ -16,7 +16,7 @@ import styles from './Cases.module.css';
 const CasesByRate = ({  data: {  confirmed,active,deltaconfirmed, deaths, recovered, states ,lastupdatedtime,deltadeaths,deltarecovered } }) => {
   
   const [state,setCountries] = useState([]);
-  console.log("data CasesByRate",state)
+ 
   useEffect(() => {
     const fetchAPI = async () => {
       setCountries(await indiaDailyValue());
@@ -42,7 +42,7 @@ const CasesByRate = ({  data: {  confirmed,active,deltaconfirmed, deaths, recove
             <TableCell  className={styles.fontWeight} className={styles.testPadding1}>Active</TableCell>
             <TableCell  className={styles.fontWeight} className={styles.testPadding} className={styles.colorGreen1}>Recovered</TableCell>
             <TableCell  className={styles.fontWeight} className={styles.testPadding1}>Deaths</TableCell>
-            <TableCell className={styles.fontWeight} className={styles.testPadding1}>Last Updated</TableCell>
+            {/* <TableCell className={styles.fontWeight} className={styles.testPadding1}>Last Updated</TableCell> */}
           </TableRow>
         </TableHead>
         <TableBody>
@@ -50,12 +50,13 @@ const CasesByRate = ({  data: {  confirmed,active,deltaconfirmed, deaths, recove
             <TableRow key={i}>
               <TableCell component="th" scope="row" className={styles.fontWeight} className={styles.testPadding1}>
                 {row.states}
+                <div className={styles.font8}>{row.lastupdatedtime}</div>
               </TableCell>
               <TableCell  className={styles.colorRed} className={styles.colorRed}><div>{row.confirmed}</div><div className={styles.visiblehide}>gg</div><div>{row.deltaconfirmed}<span className={styles.arrowCss}>{icons.arrowN}</span></div></TableCell>
-              <TableCell  className={styles.colorRed} className={styles.colorRed}><div>{row.active}</div><div>{Number(((row.active)/(row.confirmed)*100)).toFixed(0)  }%</div><div className={styles.visiblehide}>gg</div></TableCell>
-          <TableCell  className={styles.colorGreen} className={styles.colorGreen}><div>{row.recovered}</div><div>{Number(((row.recovered)/(row.confirmed)*100)).toFixed(0)  }%</div><div>{row.deltarecovered}<span className={styles.arrowCss}>{icons.arrowN}</span></div></TableCell>
-          <TableCell   className={styles.testPadding}><div>{row.deaths} </div><div>{Number(((row.deaths)/(row.confirmed)*100)).toFixed(0)  }%</div><div>{row.deltadeaths}<span className={styles.arrowCss}>{icons.arrowN}</span></div></TableCell>
-              <TableCell  className={styles.font8}>{row.lastupdatedtime}</TableCell>
+              <TableCell  className={styles.colorRed} className={styles.colorRed}><div>{row.active}</div><div>{isNaN(parseInt(Number(((row.active)/(row.confirmed)*100)).toFixed(0)) ) ? 0 : parseInt(Number(((row.active)/(row.confirmed)*100)).toFixed(0))  }%</div><div className={styles.visiblehide}>gg</div></TableCell>
+          <TableCell  className={styles.colorGreen} className={styles.colorGreen}><div>{row.recovered}</div><div>{isNaN(parseInt(Number(((row.recovered)/(row.confirmed)*100)).toFixed(0)) ) ? 0 : parseInt(Number(((row.recovered)/(row.confirmed)*100)).toFixed(0))  }%</div><div>{row.deltarecovered}<span className={styles.arrowCss}>{icons.arrowN}</span></div></TableCell>
+          <TableCell   className={styles.testPadding}><div>{row.deaths} </div><div>{isNaN(parseInt(Number(((row.deaths)/(row.confirmed)*100)).toFixed(0) )) ? 0 : parseInt(Number(((row.deaths)/(row.confirmed)*100)).toFixed(0)) } %</div><div>{row.deltadeaths}<span className={styles.arrowCss}>{icons.arrowN}</span></div></TableCell>
+              {/* <TableCell  className={styles.font8}>{row.lastupdatedtime}</TableCell> */}
               
             </TableRow>
           ))}

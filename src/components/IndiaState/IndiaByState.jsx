@@ -50,7 +50,8 @@ const IndiaByState = ({ data }) => {
   const allSt = Object.keys(window.data);
   console.log("widnow allSt",allSt)
   setallStateData(allSt);
-  filterTypes(['Andaman and Nicobar Islands']);
+  // filterTypes(['Andaman and Nicobar Islands']);
+  filterTypes(allSt[0]);
   console.log("window.result",window.result)
   const test  = Object.values(window.result);
   console.log("window.result['key'].districtData",test);

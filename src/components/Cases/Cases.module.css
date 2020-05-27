@@ -6,7 +6,7 @@
   
   @media only screen and (max-width: 770px) {
     .container {
-      width: 100% !important;;
+      width: 105% !important;;
     }
     .customers {
       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -65,7 +65,9 @@
     color:red;
   } */
   .font8{
-    font-size: 10px!important;
+    font-size: 9px!important;
+    font-weight: 500;
+    
   }
 
   .font11 {

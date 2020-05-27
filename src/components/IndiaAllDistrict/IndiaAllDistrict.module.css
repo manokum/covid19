@@ -1,138 +1,154 @@
 .container {
-    display: flex;
-    justify-content: center;
-    width: 65%;
-  }
-  
-  @media only screen and (max-width: 770px) {
-    .container {
-      width: 100%;
-    }
-    .customers {
-      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-      border-collapse: collapse;
-      /* font-size: 2.9vw !important; */
-      font-size: 11px;
-      /* width: 100%; */
-    }
+  display: flex;
+  justify-content: center;
+  width: 65%;
+}
 
+@media only screen and (max-width: 770px) {
+  .container {
+    width: 100%;
   }
-
   .customers {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    font-size: 11px;
     /* font-size: 2.9vw !important; */
-    /* font-size: 3.5vw !important */
+    font-size: 3vw !important
     /* width: 100%; */
   }
-  
-  .customers td, .customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  ;
-  
-  .customers tr:nth-child(even){background-color: #f2f2f2;}
-  
-  .customers tr:hover {background-color: #ddd;}
-  
-  .customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color:#51d0de;
-    color: white;
-  }
-  .class1{
-    color:green;
-    font-weight: 900;
-    
-  }
-  
-  .class3{
-    color:red;
-    font-weight: 700;
-  }
-  /* .customers tr:first-child {background-color: burlywood} */
-  .formControl {
-    width: 100% !important;
-    /* margin-bottom: 30px !important; */
-    margin: 10px !important;
-    margin-bottom: 30px !important
-  }
-  .green{
-    background-color: green;
-  }
-  .red{
-    background-color: red;
-  }
-  .orange{
-    background-color: orange;
-  }
-  
-  .font8{
-    font-size: 10px!important;
-  }
 
-  .font11 {
-  font-size: 11px;
+}
+
+/* .customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+ 
+}
+
+.customers td, .customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+;
+
+.customers tr:nth-child(even){background-color: #f2f2f2;}
+
+.customers tr:hover {background-color: #ddd;}
+
+.customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:#51d0de;
+  color: white;
+} */
+.class1{
+  color:green;
+  font-weight: 900;
+  
+}
+
+.class3{
+  color:red;
+  font-weight: 700;
+}
+/* .customers tr:first-child {background-color: burlywood} */
+.formControl {
+  width: 50% !important;
+  /* margin-bottom: 30px !important; */
+  margin: 10px !important;
+  margin-bottom: 30px !important
+}
+/* .tdBreak{
+  word-break: break-all;
+} */
+
+.arrowCss {
+  color: #4169e1;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px;
+}
+
+.font8{
+  font-size: 10px!important;
+}
+
+.font11 {
+font-size: 11px;
 }
 table {
-  min-width:  700 !important;
+min-width:  700 !important;
 }
 .fontWeight{
-  font-weight: 600 !important;
-  font-size: 12px !important;
-  padding: 3px !important;
+font-weight: 600 !important;
+font-size: 12px !important;
+padding: 3px !important;
 }
 .colorRed1{
-  color:red !important;
-  font-weight: 600 !important;
-  font-size: 12px !important;
-  padding: 3px !important;
+color:red !important;
+font-weight: 600 !important;
+font-size: 12px !important;
+padding: 3px !important;
 }
 
 .colorGreen1{
-  color:rgb(0,139,139) !important;
-  font-weight: 600 !important;
-  font-size: 12px !important;
-  padding: 3px !important;
+color:rgb(0,139,139) !important;
+font-weight: 600 !important;
+font-size: 12px !important;
+padding: 3px !important;
 }
 
 .testPadding {
-  padding: 3px !important;
-  font-size: 11px !important;
-  padding: 3px !important;
+padding: 3px !important;
+font-size: 11px !important;
+padding: 3px !important;
 }
 .testPadding1 {
-  font-size: 10.5px !important;
-  padding: 5px !important;
-  font-weight: 600 !important;
+font-size: 10.5px !important;
+padding: 5px !important;
+font-weight: 600 !important;
 }
-  
+
 @media only screen and (max-width: 770px) {
-  .container {
-    width: 100% !important;;
-  }
-  .customers {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse !important;
-    /* font-size: 2.9vw !important; */
-    /* font-size: 3vw !important; */
-    font-size: 11px !important;
-    width: 100%  !important;
-  }
-  .testPadding {
-    
-    padding: 3px !important;
-    font-size: 11px !important;
-  }
+.container {
+  width: 100% !important;;
+}
+.customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse !important;
+  /* font-size: 2.9vw !important; */
+  /* font-size: 3vw !important; */
+  font-size: 11px !important;
+  width: 100%  !important;
+}
+.testPadding {
+  
+  padding: 3px !important;
+  font-size: 11px !important;
+}
 }
 
 .customers {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  font-size: 11px !important;;
-  width: 100%  !important;
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+font-size: 11px !important;;
+width: 100%  !important;
+}
+.colorRed{
+color:red !important;
+padding: 3px !important;
+font-size: 11px !important;
+padding: 3px !important;
+}
+.colorGreen{
+color:rgb(0,139,139) !important;
+padding: 3px !important;
+font-size: 11px !important;
+padding: 3px !important;
+}
+.hidden{
+display: none;
+}
+.visibilityhidden{
+visibility: hidden;
 }

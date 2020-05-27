@@ -90,13 +90,13 @@ class App extends React.Component {
     ><span className={styles.removeborder}>{icons.map}</span>
       State
     </NavLink>
-    <NavLink
+    {/* <NavLink
       activeClassName={styles.navbar__link__active}
       className={styles.navbar__link}
       to="/zonedata"
     ><span className={styles.removeborder}>{icons.homes}</span>
       Zone
-    </NavLink>
+    </NavLink> */}
     </div>
 </nav>
 
@@ -128,11 +128,11 @@ class App extends React.Component {
           <Route exact path="/india">
           <IndiaByState/>
           </Route>
-          <Route exact path="/zonedata">
+          {/* <Route exact path="/zonedata">
           <div className={styles.container}>
           <IndiaAllDistrict/>
           </div>
-          </Route>
+          </Route> */}
          
         </Switch>
       </div>

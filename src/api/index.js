@@ -4,6 +4,7 @@ const url = 'https://covid19.mathdro.id/api';
 const url1 = 'https://api.covid19india.org/data.json';
 const url2 = 'https://api.covid19india.org/state_district_wise.json';
 const url3= 'https://newsapi.org/v2/top-headlines?country=in&apiKey=ac385d82856b4df09ca19e740e16eac3';
+const urlZones = 'https://api.covid19india.org/zones.json'
 export const fetchData = async (country) => {
   let changeableUrl = url;
 
@@ -39,7 +40,16 @@ export const fetchCountries = async () => {
     return error;
   }
 };
+export const fetchZones = async () => {
+  try {
+    const { data } = await axios.get(`${urlZones}`);
 
+    return data.zones.map(({ district, state, zone,lastupdated:statecode}) => ({district:district,state:state,zone:zone,statecode }));
+  } catch (error) {
+    return error;
+  }
+};
+//district,state,zone 
 export const indiaDailyValue = async () => {
   try{
     const { data} = await axios.get(`${url1}`);
