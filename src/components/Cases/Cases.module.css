@@ -70,6 +70,22 @@
     
   }
 
+  .font8{
+    font-size: 9px!important;
+    font-weight: 500;
+    
+  }
+  
+    .blink_me {
+      animation: blinker 1s linear infinite;
+    }
+    
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }
+    }
+  
   .font11 {
   font-size: 11px;
 }
