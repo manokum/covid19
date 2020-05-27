@@ -54,10 +54,10 @@ const CasesByRate = ({  data: {  confirmed,active,deltaconfirmed, deaths, recove
                 {row.states}
                 <div className={styles.font8}>{row.lastupdatedtime}</div>
               </TableCell>
-              <TableCell  className={styles.colorRed} className={styles.colorRed}><div>{row.confirmed}</div><div className={styles.visiblehide}>gg</div><div><span className={styles.blink_me}>{row.deltaconfirmed}</span><span className={styles.arrowCss}>{icons.arrowN}</span></div></TableCell>
+              <TableCell  className={styles.colorRed} className={styles.colorRed}><div>{row.confirmed}</div><div className={styles.visiblehide}>gg</div><div><span className={styles.blink_me}>{row.deltaconfirmed}<span className={styles.arrowCss}>{icons.arrowN}</span></span></div></TableCell>
               <TableCell  className={styles.colorRed} className={styles.colorRed}><div>{row.active}</div><div>{isNaN(parseInt(Number(((row.active)/(row.confirmed)*100)).toFixed(0)) ) ? 0 : parseInt(Number(((row.active)/(row.confirmed)*100)).toFixed(0))  }%</div><div className={styles.visiblehide}>gg</div></TableCell>
-          <TableCell  className={styles.colorGreen} className={styles.colorGreen}><div>{row.recovered}</div><div>{isNaN(parseInt(Number(((row.recovered)/(row.confirmed)*100)).toFixed(0)) ) ? 0 : parseInt(Number(((row.recovered)/(row.confirmed)*100)).toFixed(0))  }%</div><div><span className={styles.blink_me}>{row.deltarecovered}</span><span className={styles.arrowCss}>{icons.arrowN}</span></div></TableCell>
-          <TableCell   className={styles.testPadding}><div>{row.deaths} </div><div>{isNaN(parseInt(Number(((row.deaths)/(row.confirmed)*100)).toFixed(0) )) ? 0 : parseInt(Number(((row.deaths)/(row.confirmed)*100)).toFixed(0)) } %</div><div><span className={styles.blink_me}>{row.deltadeaths}</span><span className={styles.arrowCss}>{icons.arrowN}</span></div></TableCell>
+          <TableCell  className={styles.colorGreen} className={styles.colorGreen}><div>{row.recovered}</div><div>{isNaN(parseInt(Number(((row.recovered)/(row.confirmed)*100)).toFixed(0)) ) ? 0 : parseInt(Number(((row.recovered)/(row.confirmed)*100)).toFixed(0))  }%</div><div>{row.deltarecovered}<span className={styles.arrowCss}>{icons.arrowN}</span></div></TableCell>
+          <TableCell   className={styles.testPadding}><div>{row.deaths} </div><div>{isNaN(parseInt(Number(((row.deaths)/(row.confirmed)*100)).toFixed(0) )) ? 0 : parseInt(Number(((row.deaths)/(row.confirmed)*100)).toFixed(0)) } %</div><div>{row.deltadeaths}<span className={styles.arrowCss}>{icons.arrowN}</span></div></TableCell>
               {/* <TableCell  className={styles.font8}>{row.lastupdatedtime}</TableCell> */}
               
             </TableRow>
